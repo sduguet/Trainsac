@@ -25,6 +25,12 @@
 	left: 70px;
 }
 
+.header__readme {
+	position: absolute;
+	right: 70px;
+	cursor: pointer;
+}
+
 .points {
 	color: white;
 }

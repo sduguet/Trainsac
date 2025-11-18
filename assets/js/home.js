@@ -1,6 +1,8 @@
 setTimeout(() => init(), 500);
 
 function init() {
+  if (!localStorage.getItem('Trainsac')) dislpayReadme();
+
   const ls = JSON.parse(localStorage.getItem('Trainsac')) || {};
   const maxLevelClear = ls.maxLevelClear || 0;
   const levelsPb = ls.levelsPb || {};
@@ -19,8 +21,6 @@ function init() {
 
     if (diff >= 0 && diff <= 2) {
       const medal = ['gold', 'silver', 'bronze'][diff];
-      console.log(levelNode);
-      console.log(medal);
       levelNode.classList.add(`level--${medal}`);
     }
   }
@@ -36,4 +36,20 @@ function init() {
 
     window.location.href = '/game.html';
   }
+
+  const headerReadme = document.querySelector('.header__readme');
+  headerReadme.addEventListener('click', dislpayReadme);
+}
+
+function dislpayReadme() {
+    const readme = document.querySelector('.readme');
+    readme.classList.remove('hide');
+    readme.addEventListener('click', closeReadme);
+}
+
+function closeReadme(e) {
+    if (!e.target.classList.contains('readme')) return;
+
+    const readme = document.querySelector('.readme');
+    readme.classList.add('hide');
 }

@@ -63,3 +63,20 @@
 .level--bronze::before {
 	background-image: url('../img/medal-bronze.png');
 }
+
+.readme {
+	width: 100%;
+	height: 100%;
+	background-color: #10172b7e;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10000;
+}
+
+.readme__img {
+	max-width: 900px;
+}
