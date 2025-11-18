@@ -1,0 +1,13 @@
+@font-face {
+    font-family: "Upheavtt";
+    font-style: normal;
+    font-weight: 400;
+    src: url("/assets/fonts/upheaval/upheavtt.ttf") format("truetype"),
+}
+
+@font-face {
+    font-family: "Pixellari";
+    font-style: normal;
+    font-weight: 400;
+    src: url("/assets/fonts/pixellari/Pixellari.ttf") format("truetype"),
+}

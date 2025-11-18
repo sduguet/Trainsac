@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="./assets/img/favicon.png">
+  <title>Trainsac</title>
+
+  <link href="./assets/styles/reset.css" rel="stylesheet">
+  <link href="./assets/styles/fonts.css" rel="stylesheet">
+  <link href="./assets/styles/header.css" rel="stylesheet">
+  <link href="./assets/styles/styles.css" rel="stylesheet">
+  <link href="./assets/styles/game.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body oncontextmenu="return false">
+  <header class="header">
+    <div class="header__container">
+      <a class="header__home" href="/">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M16.0002 19.9877H18.9902L19.0002 11.6117L11.9982 4.41975L5.00624 11.5708L5.00024 19.9877H8.00024V12.9878C8.00024 12.4347 8.44724 11.9878 9.00024 11.9878H15.0002C15.5522 11.9878 16.0002 12.4347 16.0002 12.9878V19.9877ZM14.0002 19.9878H10.0002V13.9878H14.0002V19.9878ZM20.4242 10.1728L12.7152 2.28875C12.3382 1.90375 11.6622 1.90375 11.2852 2.28875L3.57524 10.1737C3.21024 10.5487 3.00024 11.0728 3.00024 11.6117V19.9877C3.00024 21.0907 3.84724 21.9877 4.88824 21.9877H9.00024H15.0002H19.1112C20.1522 21.9877 21.0002 21.0907 21.0002 19.9877V11.6117C21.0002 11.0728 20.7902 10.5488 20.4242 10.1728Z" fill="#fafafa"/>
+        </svg>
+      </a>
+  
+      <p class="points">
+        Points: <span class="points__number">0</span> / <span class="points__total"></span>
+      </p>
+
+      <p class="objectif">
+        Objectif: <span class="objectif__value"></span> trains</span>
+      </p>
+    </div>
+  </header>
+  
+  <main class="main">
+    <canvas id="canvas"></canvas>
+  </main>
+
+  <div id="confettis"></div>
+  
+  <script src="./assets/js/cloudflare.js"></script>
+  <script src="./assets/js/utils.js"></script>
+  <script src="./assets/js/controlsListeners.js"></script>
+  <script src="./assets/js/data/collisions.js"></script>
+  <script src="./assets/js/classes/Sprite.js"></script>
+  <script src="./assets/js/classes/CollisionBlock.js"></script>
+  <script src="./assets/js/classes/Train.js"></script>
+  <script src="./assets/js/classes/Station.js"></script>
+  <script src="./assets/js/confetit.js"></script>
+  <script src="./assets/js/script.js"></script>
+</body>
+</html>

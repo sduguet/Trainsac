@@ -1,0 +1,65 @@
+.main {
+}
+
+.main__container {
+	max-width: calc(1280px + 140px);
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 70px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.main__title {
+	font-size: 34px;
+}
+
+.main-list {
+	width: 100%;
+	margin-top: 64px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.level {
+	border-radius: 8px;
+	padding: 16px 32px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 8px;
+	transition: all .2s ease;
+	position: relative;
+}
+.level:not(.level--disabled) {
+	cursor: pointer;
+}
+.level:not(.level--disabled):hover {
+	background-color: rgb(255, 255, 255, .05);
+}
+.level--disabled {
+	opacity: .5;
+	filter: grayscale(1);
+}
+.level::before {
+	content: '';
+	width: 48px;
+	height: 48px;
+	background-size: cover;
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.level--gold::before {
+	background-image: url('../img/medal-gold.png');
+}
+.level--silver::before {
+	background-image: url('../img/medal-silver.png');
+}
+.level--bronze::before {
+	background-image: url('../img/medal-bronze.png');
+}
